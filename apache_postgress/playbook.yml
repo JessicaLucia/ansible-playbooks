@@ -1,0 +1,21 @@
+---
+# Playbooks can contain multiple plays
+- hosts: localhost
+  remote_user: root
+  tasks:
+          - name: ensure apache2 is at the latest version
+            yum:
+                    name: apache2
+                    state: latest
+
+- hosts: localhost
+  remote_user: root
+  tasks:
+          - name: ensure postgresql is at the latest version
+            yum:
+                    name: postgresql
+                    state: latest
+          - name: ensure that postgresql is started
+            service:
+                    name: postgresql
+                    state: started
