@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  tasks:
+          - name: send a message to chat in playbook
+            telegram:
+                    token: '1029371716:AAHSEVX0Afw2dde7IP8hHpbBJFYZWQHeZag'
+                    chat_id: 99367929
+                    msg: Ansible task finished
