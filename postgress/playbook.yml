@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  tasks:
+          - name: install postgresql
+            apt: name=postgresql state=present update_cache=yes
+
+          - name: start postgresql
+            service: name=postgresql state=started enabled=yes
+            
