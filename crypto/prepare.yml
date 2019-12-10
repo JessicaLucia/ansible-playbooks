@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  tasks:
+          - name: Generate subdirectory
+            shell:
+                    cmd: mkdir -p /etc/ssl/{{ item }}
+            loop: [ 'private', 'public', 'certificate']
