@@ -1,11 +1,6 @@
 ---
 - hosts: localhost
   tasks:
-          - openssh_keypair:
-                  path: /tmp/id_ssh_rsa
-                  size: 2048
-                  force: True
-                  type: rsa
           - name: Generate an OpenSSL private key with a different size (2048 bits)
             openssl_privatekey:
                     path: /etc/ssl/private/ansible.com.pem
