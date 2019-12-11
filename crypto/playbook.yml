@@ -4,12 +4,11 @@
           - name: Generate an OpenSSL private key with a different size (2048 bits)
             openssl_privatekey:
                     path: /etc/ssl/private/ansible.com.pem
-
           - name: Generate an OpenSSL public key in pem format
             openssl_publickey:
                     path: /etc/ssl/public/ansible.com.pem
                     privatekey_path: /etc/ssl/private/ansible.com.pem
-
+                    force: yes
           - openssh_cert:
                   type: host
                   signing_key: /etc/ssl/private/ansible.com.pem
