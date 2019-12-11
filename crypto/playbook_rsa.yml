@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  tasks:
+          - openssh_keypair:
+                  path: /tmp/id_ssh_rsa
+                  size: 2048
+                  force: True
+                  type: rsa
