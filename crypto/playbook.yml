@@ -9,7 +9,7 @@
                     path: /etc/ssl/public/ansible.com.pem
                     privatekey_path: /etc/ssl/private/ansible.com.pem
                     force: yes
-            openssl_cert:
+            openssh_cert:
                   type: host
                   signing_key: /etc/ssl/private/ansible.com.pem
                   public_key: /etc/ssl/public/ansible.com.pem
