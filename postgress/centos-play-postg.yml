@@ -1,3 +1,4 @@
+---
 - hosts: postgresql11_hosts
   tasks:
     - name: setup pg 11
